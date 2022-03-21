@@ -75,9 +75,11 @@ MDNavigationLayout:
         pos_hint: {'center_x':.5,'top':.88}
         elevation:15
 
-        MDLabel:
-            text:'Main App Content'
-            halign:'center'
+        MDBoxLayout:
+            orientation: 'vertical'
+            MDLabel:
+                text:'Main App Content'
+                halign:'center'
 
 
 
@@ -108,26 +110,33 @@ MDNavigationLayout:
                     orientation: 'vertical'
                     radius: [25,]
                     elevation:10
+                    padding:10
+                    
                     size_hint : None,None
                     width: root.width/2.2
                     height: root.height/2.5
+                    md_bg_color:1,1,1,1
 
                     FitImage:
+                        
                         radius: [25,]
                         source:'src/shirt1.jpg'
                         # adaptive_size:True
                         size_hint:1,.7
                     MDLabel:
                         text:'Price: 20$'
+                        font_style: 'H6'
                         halign:'center'
-                        size_hint:1,.3
+                        size_hint:1,.2
                 MDCard:
+                    padding:10
                     orientation: 'vertical'
                     radius: [25,]
                     elevation:10
                     size_hint : None,None
                     width: root.width/2.2
                     height: root.height/2.5
+                    md_bg_color:1,1,1,1
 
                     FitImage:
                         radius: [25,]
@@ -136,15 +145,18 @@ MDNavigationLayout:
                         size_hint:1,.7
                     MDLabel:
                         text:'Price: 20$'
+                        font_style: 'H6'
                         halign:'center'
-                        size_hint:1,.3
+                        size_hint:1,.2
                 MDCard:
+                    padding:10
                     orientation: 'vertical'
                     radius: [25,]
                     elevation:10
                     size_hint : None,None
                     width: root.width/2.2
                     height: root.height/2.5
+                    md_bg_color:1,1,1,1
 
                     FitImage:
                         radius: [25,]
@@ -153,15 +165,18 @@ MDNavigationLayout:
                         size_hint:1,.7
                     MDLabel:
                         text:'Price: 20$'
+                        font_style: 'H6'
                         halign:'center'
-                        size_hint:1,.3
+                        size_hint:1,.2
                 MDCard:
+                    padding:10
                     orientation: 'vertical'
                     radius: [25,]
                     elevation:10
                     size_hint : None,None
                     width: root.width/2.2
                     height: root.height/2.5
+                    md_bg_color:1,1,1,1
 
                     FitImage:
                         radius: [25,]
@@ -170,32 +185,38 @@ MDNavigationLayout:
                         size_hint:1,.7
                     MDLabel:
                         text:'Price: 20$'
+                        font_style: 'H6'
                         halign:'center'
-                        size_hint:1,.3
+                        size_hint:1,.2
                 MDCard:
+                    padding:10
                     orientation: 'vertical'
                     radius: [25,]
                     elevation:10
                     size_hint : None,None
                     width: root.width/2.2
                     height: root.height/2.5
+                    md_bg_color:1,1,1,1
 
                     FitImage:
                         radius: [25,]
                         source:'src/shirt5.jpg'
                         # adaptive_size:True
-                        # size_hint:1,.7
+                        size_hint:1,.7
                     MDLabel:
                         text:'Price: 20$'
+                        font_style: 'H6'
                         halign:'center'
-                        size_hint:1,.3
+                        size_hint:1,.2
                 MDCard:
+                    padding:10
                     orientation: 'vertical'
                     radius: [25,]
                     elevation:10
                     size_hint : None,None
                     width: root.width/2.2
                     height: root.height/2.5
+                    md_bg_color:1,1,1,1
 
                     FitImage:
                         radius: [25,]
@@ -204,8 +225,9 @@ MDNavigationLayout:
                         size_hint:1,.7
                     MDLabel:
                         text:'Price: 20$'
+                        font_style: 'H6'
                         halign:'center'
-                        size_hint:1,.3
+                        size_hint:1,.2
                 
 
                 

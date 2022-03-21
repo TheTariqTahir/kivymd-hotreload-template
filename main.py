@@ -14,7 +14,7 @@ from kivymd.uix.button import MDFlatButton
 # from kivymd.uix.label import MDLabel
 
 from kivy.core.window import Window
-# Window.size = 360,600
+Window.size = 360,600
 
 
 
@@ -61,12 +61,15 @@ class Main(MDApp):
         self.theme_cls.primary_palette = "DeepOrange"
         self.theme_cls.primary_hue = "A400"
         self.theme_cls.theme_style = "Light"
+        # self.theme_cls.theme_style = "Dark"
+        self.custom_name = 'Company Name'
+
+
+        # text_file = open('hotreloader.kv','r')
+        # KV= text_file.read()
+        # self.builder = Builder.load_string(KV)
         
-        text_file = open('hotreloader.kv','r')
-        KV= text_file.read()
-        self.builder = Builder.load_string(KV)
-        
-        # self.builder = Builder.load_file('kv_file.kv')
+        self.builder = Builder.load_file('kv_file.kv')
         return self.builder
 
     def update_kv_files(self,text):
