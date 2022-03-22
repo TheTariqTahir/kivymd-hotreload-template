@@ -2,8 +2,8 @@
 MDNavigationLayout:
     ScreenManager:
         id : screen_manager
-        ProductsPage:
         MainPage:
+        ProductsPage:
         WelcomeScreen:
         AboutPage:
         ProfilePage:
@@ -63,24 +63,362 @@ MDNavigationLayout:
 <MainPage>
     name:'MainPage'
     
-    MDToolbar:
-        title:'Custom Name'
-        left_action_items: [["menu", lambda x: app.toggle_nav()]]
-        pos_hint:{'top':1}
-        size_hint: 1,.1
-    MDCard:
-        # md_bg_color: .8,.8,.1,1
-        radius:[25,]
-        size_hint: .95,.87
-        pos_hint: {'center_x':.5,'top':.88}
-        elevation:15
-
-        MDBoxLayout:
-            orientation: 'vertical'
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: ('0dp', '0dp', '0dp', '25dp')
+        spacing:15
+        MDToolbar:
+            title:'Custom Name'
+            left_action_items: [["menu", lambda x: app.toggle_nav()]]
+            # pos_hint:{'top':1}
+            # size_hint: 1,.1
+        MDCard:
+            # md_bg_color: .8,.8,.1,1
+            radius:[25,]
+            size_hint: .95,.4
+            pos_hint: {'center_x':.5}
+            elevation:15
             MDLabel:
                 text:'Main App Content'
                 halign:'center'
+        MDCard:
+            # md_bg_color: .8,.8,.1,1
+            radius:[25,]
+            size_hint: .95,.87
+            pos_hint: {'center_x':.5}
+            elevation:15
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: ('0dp', '0dp', '0dp', '5dp')
+                # size_hint_x:None
+                width:self.width
+                MDBoxLayout:                    
+                    size_hint:1,.35
+                    padding: ('25dp', '0dp', '0dp', '0dp')
+                    MDLabel:
+                        text:'SHIRTS'
+                        font_style:'Button'
+                        theme_text_color: "Custom"
+                        text_color:app.theme_cls.primary_dark
+                        font_size:'20dp'
 
+                MDSeparator:
+                #-============== Main Shirts Content
+                ScrollView:
+                    do_scroll_x: True
+                    do_scroll_y: False
+                    # size_hint:None,1
+                    # size:self.size
+                    pos_hint:{'center_y':.5,'center_x':.5}
+                    
+                    MDGridLayout:
+                        size_hint: None,1
+                        rows: 1
+                        col_default_width: root.width*0.2
+                        width: self.minimum_width
+                        pos_hint:{'center_y':.5}
+                                                
+                        padding: ('10dp', '5dp', '10dp', '5dp')
+                        # md_bg_color:app.theme_cls.primary_light
+                        spacing:10
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+
+                MDSeparator:
+                AnchorLayout:
+                    size_hint:1,.2
+                    anchor_x: 'right'
+                    anchor_y: 'center'
+                    padding: ('0dp', '0dp', '10dp', '0dp')
+                    MDRaisedButton:
+                        text:'View All'   
+                        md_bg_color:1,1,1,1
+                        elevation:0          
+                        text_color:app.theme_cls.primary_dark
+                        pos_hint:{'center_x':1}
+                        size_hint:None,.8
+                        on_release:
+                            root.manager.current='ProductsPage'
+        
+        MDCard:
+            # md_bg_color: .8,.8,.1,1
+            radius:[25,]
+            size_hint: .95,.87
+            pos_hint: {'center_x':.5}
+            elevation:15
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: ('0dp', '0dp', '0dp', '5dp')
+                # size_hint_x:None
+                width:self.width
+                MDBoxLayout:                    
+                    size_hint:1,.35
+                    padding: ('25dp', '0dp', '0dp', '0dp')
+                    MDLabel:
+                        text:'SHIRTS'
+                        font_style:'Button'
+                        theme_text_color: "Custom"
+                        text_color:app.theme_cls.primary_dark
+                        font_size:'20dp'
+
+                MDSeparator:
+                #-============== Main Shirts Content
+                ScrollView:
+                    do_scroll_x: True
+                    do_scroll_y: False
+                    # size_hint:None,1
+                    # size:self.size
+                    pos_hint:{'center_y':.5,'center_x':.5}
+                    
+                    MDGridLayout:
+                        size_hint: None,1
+                        rows: 1
+                        col_default_width: root.width*0.2
+                        width: self.minimum_width
+                        pos_hint:{'center_y':.5}
+                                                
+                        padding: ('10dp', '5dp', '10dp', '5dp')
+                        # md_bg_color:app.theme_cls.primary_light
+                        spacing:10
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+
+                MDSeparator:
+                AnchorLayout:
+                    size_hint:1,.2
+                    anchor_x: 'right'
+                    anchor_y: 'center'
+                    padding: ('0dp', '0dp', '10dp', '0dp')
+                    MDRaisedButton:
+                        text:'View All'   
+                        md_bg_color:1,1,1,1
+                        elevation:0          
+                        text_color:app.theme_cls.primary_dark
+                        pos_hint:{'center_x':1}
+                        size_hint:None,.8
+                        on_release:
+                            root.manager.current='ProductsPage'
+        
+        MDCard:
+            # md_bg_color: .8,.8,.1,1
+            radius:[25,]
+            size_hint: .95,.87
+            pos_hint: {'center_x':.5}
+            elevation:15
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: ('0dp', '0dp', '0dp', '5dp')
+                # size_hint_x:None
+                width:self.width
+                MDBoxLayout:                    
+                    size_hint:1,.35
+                    padding: ('25dp', '0dp', '0dp', '0dp')
+                    MDLabel:
+                        text:'SHIRTS'
+                        font_style:'Button'
+                        theme_text_color: "Custom"
+                        text_color:app.theme_cls.primary_dark
+                        font_size:'20dp'
+
+                MDSeparator:
+                #-============== Main Shirts Content
+                ScrollView:
+                    do_scroll_x: True
+                    do_scroll_y: False
+                    # size_hint:None,1
+                    # size:self.size
+                    pos_hint:{'center_y':.5,'center_x':.5}
+                    
+                    MDGridLayout:
+                        size_hint: None,1
+                        rows: 1
+                        col_default_width: root.width*0.2
+                        width: self.minimum_width
+                        pos_hint:{'center_y':.5}
+                                                
+                        padding: ('10dp', '5dp', '10dp', '5dp')
+                        # md_bg_color:app.theme_cls.primary_light
+                        spacing:10
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+                        MDCard:
+                            elevation:10
+                            radius:[10,]
+                            pos_hint:{'center_y':.5}
+                            size_hint:None,.9
+                            width:'100dp'
+                            # adaptive_height:True
+                            FitImage:
+                                radius:[10,]
+                                # size_hint:1,1
+                                source:'src/shirt1.jpg'
+
+                MDSeparator:
+                AnchorLayout:
+                    size_hint:1,.2
+                    anchor_x: 'right'
+                    anchor_y: 'center'
+                    padding: ('0dp', '0dp', '10dp', '0dp')
+                    MDRaisedButton:
+                        text:'View All'   
+                        md_bg_color:1,1,1,1
+                        elevation:0          
+                        text_color:app.theme_cls.primary_dark
+                        pos_hint:{'center_x':1}
+                        size_hint:None,.8
+                        on_release:
+                            root.manager.current='ProductsPage'
+        
+      
+           
 
 
 
