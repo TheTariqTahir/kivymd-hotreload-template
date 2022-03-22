@@ -65,9 +65,9 @@ class Main(MDApp):
         self.custom_name = 'Company Name'
 
 
-        # text_file = open('hotreloader.kv','r')
-        # KV= text_file.read()
-        # self.builder = Builder.load_string(KV)
+        text_file = open('hotreloader.kv','r')
+        KV= text_file.read()
+        self.builder = Builder.load_string(KV)
         
         self.builder = Builder.load_file('kv_file.kv')
         return self.builder
