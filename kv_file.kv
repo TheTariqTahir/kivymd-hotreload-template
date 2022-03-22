@@ -2,8 +2,8 @@
 MDNavigationLayout:
     ScreenManager:
         id : screen_manager
-        MainPage:
         ProductsPage:
+        MainPage:
         WelcomeScreen:
         AboutPage:
         ProfilePage:
@@ -439,6 +439,7 @@ MDNavigationLayout:
             size: root.size
             MDGridLayout:
                 cols:2
+                id:ProductsPage
                 size_hint_y: None
                 height: self.minimum_height  # required to size GridLayout
                 padding: 10
@@ -466,106 +467,106 @@ MDNavigationLayout:
                         font_style: 'H6'
                         halign:'center'
                         size_hint:1,.2
-                MDCard:
-                    padding:10
-                    orientation: 'vertical'
-                    radius: [25,]
-                    elevation:10
-                    size_hint : None,None
-                    width: root.width/2.2
-                    height: root.height/2.5
-                    md_bg_color:1,1,1,1
+                # MDCard:
+                #     padding:10
+                #     orientation: 'vertical'
+                #     radius: [25,]
+                #     elevation:10
+                #     size_hint : None,None
+                #     width: root.width/2.2
+                #     height: root.height/2.5
+                #     md_bg_color:1,1,1,1
 
-                    FitImage:
-                        radius: [25,]
-                        source:'src/shirt2.jpg'
-                        # adaptive_size:True
-                        size_hint:1,.7
-                    MDLabel:
-                        text:'Price: 20$'
-                        font_style: 'H6'
-                        halign:'center'
-                        size_hint:1,.2
-                MDCard:
-                    padding:10
-                    orientation: 'vertical'
-                    radius: [25,]
-                    elevation:10
-                    size_hint : None,None
-                    width: root.width/2.2
-                    height: root.height/2.5
-                    md_bg_color:1,1,1,1
+                #     FitImage:
+                #         radius: [25,]
+                #         source:'src/shirt2.jpg'
+                #         # adaptive_size:True
+                #         size_hint:1,.7
+                #     MDLabel:
+                #         text:'Price: 20$'
+                #         font_style: 'H6'
+                #         halign:'center'
+                #         size_hint:1,.2
+                # MDCard:
+                #     padding:10
+                #     orientation: 'vertical'
+                #     radius: [25,]
+                #     elevation:10
+                #     size_hint : None,None
+                #     width: root.width/2.2
+                #     height: root.height/2.5
+                #     md_bg_color:1,1,1,1
 
-                    FitImage:
-                        radius: [25,]
-                        source:'src/shirt3.jpg'
-                        # adaptive_size:True
-                        size_hint:1,.7
-                    MDLabel:
-                        text:'Price: 20$'
-                        font_style: 'H6'
-                        halign:'center'
-                        size_hint:1,.2
-                MDCard:
-                    padding:10
-                    orientation: 'vertical'
-                    radius: [25,]
-                    elevation:10
-                    size_hint : None,None
-                    width: root.width/2.2
-                    height: root.height/2.5
-                    md_bg_color:1,1,1,1
+                #     FitImage:
+                #         radius: [25,]
+                #         source:'src/shirt3.jpg'
+                #         # adaptive_size:True
+                #         size_hint:1,.7
+                #     MDLabel:
+                #         text:'Price: 20$'
+                #         font_style: 'H6'
+                #         halign:'center'
+                #         size_hint:1,.2
+                # MDCard:
+                #     padding:10
+                #     orientation: 'vertical'
+                #     radius: [25,]
+                #     elevation:10
+                #     size_hint : None,None
+                #     width: root.width/2.2
+                #     height: root.height/2.5
+                #     md_bg_color:1,1,1,1
 
-                    FitImage:
-                        radius: [25,]
-                        source:'src/shirt4.jpg'
-                        # adaptive_size:True
-                        size_hint:1,.7
-                    MDLabel:
-                        text:'Price: 20$'
-                        font_style: 'H6'
-                        halign:'center'
-                        size_hint:1,.2
-                MDCard:
-                    padding:10
-                    orientation: 'vertical'
-                    radius: [25,]
-                    elevation:10
-                    size_hint : None,None
-                    width: root.width/2.2
-                    height: root.height/2.5
-                    md_bg_color:1,1,1,1
+                #     FitImage:
+                #         radius: [25,]
+                #         source:'src/shirt4.jpg'
+                #         # adaptive_size:True
+                #         size_hint:1,.7
+                #     MDLabel:
+                #         text:'Price: 20$'
+                #         font_style: 'H6'
+                #         halign:'center'
+                #         size_hint:1,.2
+                # MDCard:
+                #     padding:10
+                #     orientation: 'vertical'
+                #     radius: [25,]
+                #     elevation:10
+                #     size_hint : None,None
+                #     width: root.width/2.2
+                #     height: root.height/2.5
+                #     md_bg_color:1,1,1,1
 
-                    FitImage:
-                        radius: [25,]
-                        source:'src/shirt5.jpg'
-                        # adaptive_size:True
-                        size_hint:1,.7
-                    MDLabel:
-                        text:'Price: 20$'
-                        font_style: 'H6'
-                        halign:'center'
-                        size_hint:1,.2
-                MDCard:
-                    padding:10
-                    orientation: 'vertical'
-                    radius: [25,]
-                    elevation:10
-                    size_hint : None,None
-                    width: root.width/2.2
-                    height: root.height/2.5
-                    md_bg_color:1,1,1,1
+                #     FitImage:
+                #         radius: [25,]
+                #         source:'src/shirt5.jpg'
+                #         # adaptive_size:True
+                #         size_hint:1,.7
+                #     MDLabel:
+                #         text:'Price: 20$'
+                #         font_style: 'H6'
+                #         halign:'center'
+                #         size_hint:1,.2
+                # MDCard:
+                #     padding:10
+                #     orientation: 'vertical'
+                #     radius: [25,]
+                #     elevation:10
+                #     size_hint : None,None
+                #     width: root.width/2.2
+                #     height: root.height/2.5
+                #     md_bg_color:1,1,1,1
 
-                    FitImage:
-                        radius: [25,]
-                        source:'src/shirt6.jpg'
-                        # adaptive_size:True
-                        size_hint:1,.7
-                    MDLabel:
-                        text:'Price: 20$'
-                        font_style: 'H6'
-                        halign:'center'
-                        size_hint:1,.2
+                #     FitImage:
+                #         radius: [25,]
+                #         source:'src/shirt6.jpg'
+                #         # adaptive_size:True
+                #         size_hint:1,.7
+                #     MDLabel:
+                #         text:'Price: 20$'
+                #         font_style: 'H6'
+                #         halign:'center'
+                #         size_hint:1,.2
                 
 
                 

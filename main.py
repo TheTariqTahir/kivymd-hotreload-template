@@ -1,3 +1,4 @@
+
 from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -11,10 +12,10 @@ from kivymd.uix.button import MDFlatButton
 # from kivymd.uix.menu import MDDropdownMenu
 # from kivymd.uix.picker import MDDatePicker
 # from kivymd.uix.list import TwoLineIconListItem,TwoLineListItem
-# from kivymd.uix.label import MDLabel
-
+from kivymd.uix.card import MDCard
+# from kivymd.uix.bottomsheet import MDCustomBottomSheet
 from kivy.core.window import Window
-Window.size = 360,600
+w=Window.size = 360,600
 
 
 
@@ -33,6 +34,15 @@ class MainPage(Screen):
     pass
 
 class ProductsPage(Screen):
+    # def __init__(self, **kwargs):
+    #     super().__init__(**kwargs)
+    # # #     self.root.ids.ProductsPage.add_widgets(
+    # # #         MDCard(size_hint=(.5,.5))
+    # #     print('run')
+    #     print(self.ids.ProductsPage.add_widgets(
+    #         MDFlatButton(text='test')
+    #     ))
+    
     pass
 
 
@@ -65,11 +75,32 @@ class Main(MDApp):
         self.custom_name = 'Company Name'
 
 
-        text_file = open('hotreloader.kv','r')
-        KV= text_file.read()
-        self.builder = Builder.load_string(KV)
+        # text_file = open('hotreloader.kv','r')
+        # KV= text_file.read()
+        # self.builder = Builder.load_string(KV)
         
         self.builder = Builder.load_file('kv_file.kv')
+
+        
+        
+        self.builder.ids.screen_manager.get_screen('ProductsPage').ids.ProductsPage.add_widget(
+            MDCard(
+                orientation= 'vertical',
+                radius= [25,],
+                    elevation=10,
+                    padding=10,
+                    
+                    size_hint = (None,None),
+                    width= w[0]/2.2,
+                    height= w[1]/2.5,
+                    md_bg_color=(1,1,1,1),
+            ))
+        # print(self.builder.ids.screen_manager.get_screens())
+        
+        # self.builder.get_screens('ProducsPage').ids.ProductsPage.add_widgets(
+        #     MDCard(size_hint=(.5,.5))
+        # )
+
         return self.builder
 
     def update_kv_files(self,text):
