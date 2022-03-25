@@ -1,0 +1,112 @@
+
+MDNavigationLayout:
+    ScreenManager:
+        id : screen_manager
+        MainPage:
+        ProductsPage:
+        WelcomeScreen:
+        AboutPage:
+        ProfilePage:
+
+    MDNavigationDrawer:
+        id: nav_drawer
+        size_hint: .6,1
+        MDGridLayout:
+            cols:1
+            
+            FitImage:
+                source:'src/company_logo.jpg'
+                adaptive_size:True
+                size_hint: 1,.2
+
+            MDList:
+                size_hint: 1,.8
+                OneLineIconListItem:
+                    text: 'Home'
+                    on_release: 
+                        app.change_screen('MainPage','left')
+                        app.toggle_nav()
+                    IconLeftWidget:
+                        icon: "warehouse"
+                OneLineIconListItem:
+                    text: 'Profile'
+                    on_release: 
+                        app.change_screen('ProfilePage','left')
+                        app.toggle_nav()
+                    IconLeftWidget:
+                        icon: "face-profile"
+                OneLineIconListItem:
+                    text: 'ProductsPage'
+                    on_release: 
+                        app.change_screen('ProductsPage','left')
+                        app.toggle_nav()
+                    IconLeftWidget:
+                        icon: "tshirt-crew"
+            
+            MDList:
+                size_hint: 1,.2
+                
+                OneLineAvatarListItem:
+                    text: 'About'
+                    on_release: 
+                        app.change_screen('AboutPage','left')
+                        app.toggle_nav()
+                    ImageLeftWidget:
+                        source:'src/company_logo.jpg'
+                        size_hint: .9,.9
+                OneLineListItem:
+                    text: 'Made by Tariq-Dev'
+
+<WelcomeScreen>
+    name:'WelcomeScreen'
+
+<MainPage>
+    name:'MainPage'
+    
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: ('0dp', '0dp', '0dp', '25dp')
+        spacing:15
+        MDToolbar:
+            title:'Custom Name'
+            right_action_items: [["menu", lambda x: app.toggle_nav()]]
+        MDLabel:
+            text: 'This Main Page'
+            halign: 'center'
+
+
+<ProductsPage>
+    name:'ProductsPage'
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title:'Custom Name'
+            right_action_items: [["menu", lambda x: app.toggle_nav()]]
+        MDLabel:
+            text:'Products Page'
+            halign: 'center'
+        
+
+
+<AboutPage>
+    name:'AboutPage'
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title:'Custom Name'
+            right_action_items: [["menu", lambda x: app.toggle_nav()]]
+        MDLabel:
+            text:'About Page'
+            halign: 'center'
+    
+<ProfilePage>
+    name:'ProfilePage'
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title:'Custom Name'
+            right_action_items: [["menu", lambda x: app.toggle_nav()]]
+        MDLabel:
+            text:'ProfilePage'
+            halign: 'center'
+    
